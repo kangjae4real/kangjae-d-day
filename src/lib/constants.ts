@@ -1,0 +1,4 @@
+const START_DATE = "2022-11-17";
+const EXPIRED_DATE = "2025-09-16";
+
+export { START_DATE, EXPIRED_DATE };
