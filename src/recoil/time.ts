@@ -1,9 +1,8 @@
 import { atom } from "recoil";
 
-type TimeViewType = "years" | "months" | "days" | "hours" | "minutes" | "seconds";
+type TimeViewType = "months" | "days" | "hours" | "minutes" | "seconds";
 
 const TIME_VIEW_TYPE_MAP: Record<TimeViewType, string> = {
-  years: "연도",
   months: "달",
   days: "날짜",
   hours: "시간으",
