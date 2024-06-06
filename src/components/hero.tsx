@@ -5,7 +5,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import Countdown from "@/components/countdown";
 
-const heroVariants = cva("flex items-center flex-col gap-4 lg:gap-8");
+const heroVariants = cva("flex items-center flex-col py-2 lg:py-4 gap-4 lg:gap-8");
 
 interface HeroProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "children">, VariantProps<typeof heroVariants> {}
 
