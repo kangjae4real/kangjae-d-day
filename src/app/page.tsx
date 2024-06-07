@@ -1,8 +1,16 @@
 "use client";
 
-import PageLayout from "@/components/layouts/page-layout";
-import Hero from "@/components/hero";
-import BuyMeACoffee from "@/components/buy-me-a-coffee";
+import dynamic from "next/dynamic";
+
+const PageLayout = dynamic(() => import("@/components/layouts/page-layout"), {
+  ssr: false,
+});
+const Hero = dynamic(() => import("@/components/hero"), {
+  ssr: false,
+});
+const BuyMeACoffee = dynamic(() => import("@/components/buy-me-a-coffee"), {
+  ssr: false,
+});
 
 export default function IndexPage() {
   return (
