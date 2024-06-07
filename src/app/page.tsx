@@ -6,7 +6,7 @@ import BuyMeACoffee from "@/components/buy-me-a-coffee";
 
 export default function IndexPage() {
   return (
-    <PageLayout childrenClassName="py-10">
+    <PageLayout childrenClassName="flex flex-col justify-center items-center">
       <Hero />
       <BuyMeACoffee />
     </PageLayout>
