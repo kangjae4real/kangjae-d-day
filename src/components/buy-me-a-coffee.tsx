@@ -24,14 +24,23 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import Image from "next/image";
-import Link from "next/link";
+import Image from "@/components/image";
 import useWindowSize from "@/hooks/use-window-size";
 
 const BuyMeACoffeeInfo = () => {
   const { width } = useWindowSize();
   const [open, setOpen] = useState(false);
   const isDesktop = useMemo(() => width >= 1024, [width]);
+  const image = (
+    <Image
+      src="/assets/bmc-button.png"
+      alt="Buy Me A Coffee"
+      href="https://www.buymeacoffee.com/kangjae"
+      target="_blank"
+      width={217}
+      height={60}
+    />
+  );
 
   if (isDesktop) {
     return (
@@ -49,17 +58,7 @@ const BuyMeACoffeeInfo = () => {
             <DialogDescription>아래 이미지를 클릭하여 이동해주세요.</DialogDescription>
           </DialogHeader>
 
-          <div className="flex h-full w-full items-center justify-center">
-            <Link href="https://www.buymeacoffee.com/kangjae" target="_blank">
-              <Image
-                src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-                alt="Buy Me A Coffee"
-                width={217}
-                height={60}
-                className="h-[60px] w-[217px]"
-              />
-            </Link>
-          </div>
+          <div className="flex h-full w-full items-center justify-center">{image}</div>
 
           <DialogFooter>
             <DialogClose>
@@ -87,18 +86,7 @@ const BuyMeACoffeeInfo = () => {
           <DrawerTitle>감사합니다!</DrawerTitle>
           <DrawerDescription>아래 이미지를 클릭하여 이동해주세요.</DrawerDescription>
         </DrawerHeader>
-
-        <div className="flex h-full w-full items-center justify-center">
-          <Link href="https://www.buymeacoffee.com/kangjae" target="_blank">
-            <Image
-              src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-              alt="Buy Me A Coffee"
-              width={217}
-              height={60}
-              className="h-[60px] w-[217px]"
-            />
-          </Link>
-        </div>
+        <div className="flex h-full w-full items-center justify-center">{image}</div>
 
         <DrawerFooter>
           <DrawerClose>
